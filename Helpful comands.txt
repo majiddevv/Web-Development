@@ -1,0 +1,5 @@
+Git Commands:
+
+1) git remote add origin https://github.com/majiddevv/Web-Development.git
+git remote remove origin
+git remote -v
