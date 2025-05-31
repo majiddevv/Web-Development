@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="res">Percentage Calculator</h1>
+  <form>
+    <label for="tm">Total Marks</label>
+    <input type="number" name="tm" placeholder="Enter Total Marks" id="tm">
+    <br>
+    <label for="obt">Obtain Marks</label>
+    <input type="number" name="obt" placeholder="Enter Obtain Marks" id="obt">
+    <br>
+    <button type="button" onclick="getperc()">Percentage</button>
+    <br>
+    <button type="button" onclick="getgrade()">Grade</button>
+    <br>
+  </form>
+  <script>
+    function getperc() {
+      let tm = document.getElementById("tm").value;
+      let obt = document.getElementById("obt").value;
+      let res = (obt / tm) * 100;
+      document.getElementById("res").innerHTML = ("Your Percentage is: " + res + "%");
+      console.log("Your Percentage is: " + res + "%");
+      alert("Your Percentage is: " + res + "%");
+    }
+    function getgrade() {
+      let tm = document.getElementById("tm").value;
+      let obt = document.getElementById("obt").value;
+      let res = (obt / tm) * 100;
+      if (res >= 90) {
+        document.getElementById("res").innerHTML = ("Your Grade is: A+");
+        console.log("Your Grade is: A+");
+        alert("Your Grade is: A+");
+      } else if (res >= 80) {
+        document.getElementById("res").innerHTML = ("Your Grade is: A");
+        console.log("Your Grade is: A");
+        alert("Your Grade is: A");
+      } else if (res >= 70) {
+        document.getElementById("res").innerHTML = ("Your Grade is: B");
+        console.log("Your Grade is: B");
+        alert("Your Grade is: B");
+      } else if (res >= 60) {
+        document.getElementById("res").innerHTML = ("Your Grade is: C");
+        console.log("Your Grade is: C");
+        alert("Your Grade is: C");
+      } else if (res >= 50) {
+        document.getElementById("res").innerHTML = ("Your Grade is: D");
+        console.log("Your Grade is: D");
+        alert("Your Grade is: D");
+      } else {
+        document.getElementById("res").innerHTML = ("Your Grade is: F");
+        console.log("Your Grade is: F");
+        alert("Your Grade is: F");
+      }
+    }
+  </script>
+
+</body>
+
+</html>

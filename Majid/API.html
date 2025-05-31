@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Weather App</h1>
+
+  <form onsubmit="GetWeather(); return false;">
+    <label for="City Name">City name</label>
+    <input type="text" Name="City Name" id="temp1" placeholder="Enter Your City Name" Required>
+    <button type="" Submit>Get Weather</button>
+  </form>
+
+
+  <script>
+    function GetWeather() {
+      let pickcityname = document.getelementbyid("temp1").value;
+      alert(pickcityname);
+
+    }
+  </script>
+</body>
+
+</html>
